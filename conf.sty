@@ -1,0 +1,57 @@
+\usepackage{parskip} % no indent
+%\usepackage{amsmath} % \text{}
+\usepackage{mathtools}
+\usepackage{amssymb} % \mathbb
+\usepackage{markdown}
+\usepackage{amsthm}
+\usepackage{mathrsfs} % \mathscr{F}
+\usepackage{tipa} % \textcorner
+\usepackage{tikz}
+\usetikzlibrary{graphs}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\setuptodonotes{inline}
+\usepackage{lipsum}
+\usepackage{csquotes}
+\MakeOuterQuote{"} % " is quote
+
+\def\chrule{\vspace{0.2cm} \hrule}
+\def\chruletwo{\chrule \chrule}
+
+\def\F{\mathscr{F}}
+\def\L{\mathcal{L}}
+\def\R{\mathcal{R}}
+
+\let\ss\undefined %What is \ss?
+\newcommand{\ss}[1]{\subsection*{#1}}
+
+\newcommand{\corner}[1]{\ulcorner {#1} \urcorner}
+\newcommand{\cimplies}{\ \implies\ }
+\newcommand{\ctextl}[1]{\ \text{#1}}
+\newcommand{\ctextr}[1]{\text{#1}\ }
+\newcommand{\ctext}[1]{\ \text{#1}\ }
+\newcommand{\cpounds}{\pounds\ }
+\newcommand{\textf}[2]{\text{{#1}(}
+                       {#2}
+                       \text{)}
+                      }
+
+\newcommand{\reasonable}{\sloppy}
+\newcommand{\union}{\cup}
+
+\renewcommand\footnoterule{} % no footnote rule
+
+\usepackage{changepage} % adjustwidth
+\usepackage{calc} % arithmetic
+
+\iffalse
+\newcommand{\qa}[3]{
+\begin{adjustwidth}{#1em}{0em}
+  #2
+  \\
+  \rule[1ex]{{0.8}\textwidth}{0.8pt}
+  #3
+  \rule[1ex]{0.8\textwidth}{0.8pt}
+\end{adjustwidth}
+}
+\fi

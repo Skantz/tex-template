@@ -6,6 +6,7 @@
 \usepackage{amsthm}
 \usepackage{mathrsfs} % \mathscr{F}
 \usepackage{tipa} % \textcorner
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{graphs}
 \usepackage{tikz-cd}
@@ -14,6 +15,10 @@
 \usepackage{lipsum}
 \usepackage{csquotes}
 \MakeOuterQuote{"} % " is quote
+\usepackage{listings}
+\usepackage{tcolorbox}
+
+% \usepackage[T1]{fontenc}
 
 \def\chrule{\vspace{0.2cm} \hrule}
 \def\chruletwo{\chrule \chrule}
@@ -39,19 +44,20 @@
 \newcommand{\reasonable}{\sloppy}
 \newcommand{\union}{\cup}
 
+\newcommand{\mchoice}[2]{\left(\binom{#1}{#2}\right)}
+\newcommand{\choice}[2]{\binom{#1}{#2}}
+
+
+\newcommand{\note}[1]{
+\begin{tcolorbox}[colframe=black,
+                  colback=Aquamarine,
+                  boxsep=0.4cm,
+                  arc=0.3cm]
+#1
+\end{tcolorbox}
+}
+
 \renewcommand\footnoterule{} % no footnote rule
 
 \usepackage{changepage} % adjustwidth
 \usepackage{calc} % arithmetic
-
-\iffalse
-\newcommand{\qa}[3]{
-\begin{adjustwidth}{#1em}{0em}
-  #2
-  \\
-  \rule[1ex]{{0.8}\textwidth}{0.8pt}
-  #3
-  \rule[1ex]{0.8\textwidth}{0.8pt}
-\end{adjustwidth}
-}
-\fi
